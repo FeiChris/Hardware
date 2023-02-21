@@ -1,26 +1,25 @@
 # STM32F103ZET6
 
-### GPIO通用输入输出
+### GPIO
 
-##### 输出
+##### 概述
 
-需要配置速度——输出驱动电路的响应速度
+​			GPIO即通用输入输出，用于数字输入输出，F103ZET6芯片拥有112个 I/O 引脚，分别在GPIOA，GPIOB，GPIOC，GPIOD，GPIOE，GPIOF，GPIOG共7个端口，每个端口有0--15共16个引脚
 
-​    2MHz   LED，蜂鸣器等普通输出引脚，USART
 
-​    10MHz   I2c
 
-​     50MHz   SPI，FSMC
+##### 输入输入
 
-+   推挽输出   GPIO_Mode_Out_PP
+GPIO可以配置8种模式，4种输入，4种输出
 
-##### 输入
-
-不用配置速度
-
-+   上拉输入       默认引脚为高电平                    GPIO_Mode_IPU
-+   下拉输入       默认引脚为低电平                    GPIO_Mode_IPD
-+   浮空输入       由外部输入决定        GPIO_Mode_IN_FLOATing
+-   普通推挽输出
+-   普通开漏输出
+-   复用推挽输出
+-   复用开漏输出
+-   上拉输入
+-   下拉输入
+-   浮空输入
+-   模拟输入
 
 #### 库函数
 
